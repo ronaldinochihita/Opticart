@@ -1,5 +1,10 @@
 # 🛒 OptiCart: Lista de Compras
 
+# OptiCart: Lista de Compras 🛒
+
+Bem-vindo ao repositório do **OptiCart**, um aplicativo Android desenvolvido para 
+otimizar a gestão de listas de compras e controle de gastos.
+
 Projeto de sistema de compras (Android + Web + DB).
 
 ## 📂 Estrutura de Pastas
