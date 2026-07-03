@@ -1,14 +1,30 @@
-# Android Studio
+# ---------- Android / Kotlin / Gradle ----------
 *.iml
-.gradle/
-/local.properties
-/.idea/
-.DS_Store
-/build/
-captures/
-.externalNativeBuild/
-.cxx/
+**/.gradle/
+**/.kotlin/
+**/build/
+**/local.properties
+**/.idea/
+**/captures/
+**/.externalNativeBuild/
+**/.cxx/
+*.apk
+*.aab
+*.keystore
 
-# Web
+# Ficheiros de sistema
+.DS_Store
+Thumbs.db
+
+# ---------- Web ----------
 node_modules/
 .env
+.env.local
+dist/
+.next/
+.nuxt/
+.vercel/
+
+# ---------- IDEs / editores ----------
+*.swp
+.vscode/

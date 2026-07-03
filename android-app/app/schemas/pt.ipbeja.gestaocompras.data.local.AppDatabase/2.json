@@ -1,0 +1,339 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "173b75bae04e8a462056e16c0f0666e9",
+    "entities": [
+      {
+        "tableName": "lojas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `morada` TEXT, `horarioAbertura` TEXT, `horarioFecho` TEXT, `favorita` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nome",
+            "columnName": "nome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "morada",
+            "columnName": "morada",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "horarioAbertura",
+            "columnName": "horarioAbertura",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "horarioFecho",
+            "columnName": "horarioFecho",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "favorita",
+            "columnName": "favorita",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "listas_compra",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `lojaId` INTEGER, `criadaEm` INTEGER NOT NULL, `concluida` INTEGER NOT NULL, FOREIGN KEY(`lojaId`) REFERENCES `lojas`(`id`) ON UPDATE NO ACTION ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nome",
+            "columnName": "nome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lojaId",
+            "columnName": "lojaId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "criadaEm",
+            "columnName": "criadaEm",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "concluida",
+            "columnName": "concluida",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_listas_compra_lojaId",
+            "unique": false,
+            "columnNames": [
+              "lojaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_listas_compra_lojaId` ON `${TABLE_NAME}` (`lojaId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "lojas",
+            "onDelete": "SET NULL",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "lojaId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "itens_lista",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `listaId` INTEGER NOT NULL, `descricao` TEXT NOT NULL, `quantidade` REAL NOT NULL, `unidade` TEXT, `precoUnitario` REAL, `noCarrinho` INTEGER NOT NULL, FOREIGN KEY(`listaId`) REFERENCES `listas_compra`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "listaId",
+            "columnName": "listaId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descricao",
+            "columnName": "descricao",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quantidade",
+            "columnName": "quantidade",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unidade",
+            "columnName": "unidade",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "precoUnitario",
+            "columnName": "precoUnitario",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "noCarrinho",
+            "columnName": "noCarrinho",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_itens_lista_listaId",
+            "unique": false,
+            "columnNames": [
+              "listaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_itens_lista_listaId` ON `${TABLE_NAME}` (`listaId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "listas_compra",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "listaId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "historico_compras",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `listaId` INTEGER NOT NULL, `nomeLista` TEXT NOT NULL, `nomeLoja` TEXT, `totalEstimado` REAL NOT NULL, `totalPago` REAL NOT NULL, `arredondamento` REAL NOT NULL, `concluidaEm` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "listaId",
+            "columnName": "listaId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nomeLista",
+            "columnName": "nomeLista",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nomeLoja",
+            "columnName": "nomeLoja",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "totalEstimado",
+            "columnName": "totalEstimado",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalPago",
+            "columnName": "totalPago",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arredondamento",
+            "columnName": "arredondamento",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "concluidaEm",
+            "columnName": "concluidaEm",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "historico_precos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `produtoNome` TEXT NOT NULL, `lojaId` INTEGER NOT NULL, `nomeLoja` TEXT NOT NULL, `preco` REAL NOT NULL, `data` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "produtoNome",
+            "columnName": "produtoNome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lojaId",
+            "columnName": "lojaId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nomeLoja",
+            "columnName": "nomeLoja",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "preco",
+            "columnName": "preco",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "data",
+            "columnName": "data",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_historico_precos_produtoNome",
+            "unique": false,
+            "columnNames": [
+              "produtoNome"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_historico_precos_produtoNome` ON `${TABLE_NAME}` (`produtoNome`)"
+          },
+          {
+            "name": "index_historico_precos_lojaId",
+            "unique": false,
+            "columnNames": [
+              "lojaId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_historico_precos_lojaId` ON `${TABLE_NAME}` (`lojaId`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '173b75bae04e8a462056e16c0f0666e9')"
+    ]
+  }
+}
