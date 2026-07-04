@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 640" width="320" height="640" role="img" aria-label="Ecrã Resumo Final do Opticart">
+  <rect x="4" y="4" width="312" height="632" rx="40" ry="40" fill="#1a1a1a"/>
+  <rect x="12" y="12" width="296" height="616" rx="32" ry="32" fill="#F2F2F2"/>
+  <text x="28" y="34" font-family="-apple-system,Helvetica" font-size="11" font-weight="600" fill="#111">9:41</text>
+  <circle cx="285" cy="30" r="4" fill="#111"/>
+
+  <!-- Barra topo -->
+  <path d="M32 76l-8 8 8 8" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+  <text x="56" y="82" font-family="-apple-system,Helvetica" font-size="20" font-weight="700" fill="#111">Resumo Final</text>
+  <text x="56" y="100" font-family="-apple-system,Helvetica" font-size="13" fill="#6C6C6C">Compras Semanais</text>
+
+  <!-- Cartão totais -->
+  <rect x="20" y="120" width="280" height="100" rx="14" fill="#E9F5EC" stroke="#1F8A3D" stroke-width="1.2"/>
+  <text x="34" y="140" font-family="-apple-system,Helvetica" font-size="10" fill="#0F5A26" opacity="0.75">Total real</text>
+  <text x="34" y="164" font-family="-apple-system,Helvetica" font-size="18" font-weight="700" fill="#0F5A26">19,75 €</text>
+
+  <text x="286" y="140" text-anchor="end" font-family="-apple-system,Helvetica" font-size="10" fill="#0F5A26" opacity="0.75">A pagar (arredondado)</text>
+  <text x="286" y="170" text-anchor="end" font-family="-apple-system,Helvetica" font-size="24" font-weight="700" fill="#1F8A3D">19,75 €</text>
+
+  <text x="34" y="200" font-family="-apple-system,Helvetica" font-size="10" fill="#0F5A26" opacity="0.75">Arredondamento: 0,00 €</text>
+
+  <!-- Título -->
+  <text x="28" y="248" font-family="-apple-system,Helvetica" font-size="14" font-weight="700" fill="#111">Itens comprados (4)</text>
+
+  <!-- Item 1 -->
+  <rect x="20" y="260" width="280" height="50" rx="12" fill="#E9F5EC"/>
+  <rect x="34" y="272" width="28" height="28" rx="6" fill="#B0785A"/>
+  <text x="48" y="292" text-anchor="middle" font-family="-apple-system,Helvetica" font-size="14" font-weight="700" fill="#fff">M</text>
+  <text x="72" y="284" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#0F5A26">Massa Espiral</text>
+  <text x="72" y="298" font-family="-apple-system,Helvetica" font-size="10" fill="#0F5A26" opacity="0.75">1 un</text>
+  <text x="286" y="292" text-anchor="end" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#0F5A26">0,85 €</text>
+
+  <!-- Item 2 -->
+  <rect x="20" y="318" width="280" height="50" rx="12" fill="#E9F5EC"/>
+  <rect x="34" y="330" width="28" height="28" rx="6" fill="#8D6E63"/>
+  <text x="48" y="350" text-anchor="middle" font-family="-apple-system,Helvetica" font-size="14" font-weight="700" fill="#fff">P</text>
+  <text x="72" y="342" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#0F5A26">Pão</text>
+  <text x="72" y="356" font-family="-apple-system,Helvetica" font-size="10" fill="#0F5A26" opacity="0.75">2 un</text>
+  <text x="286" y="350" text-anchor="end" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#0F5A26">2,40 €</text>
+
+  <!-- Item 3 -->
+  <rect x="20" y="376" width="280" height="50" rx="12" fill="#E9F5EC"/>
+  <rect x="34" y="388" width="28" height="28" rx="6" fill="#5B8DEF"/>
+  <text x="48" y="408" text-anchor="middle" font-family="-apple-system,Helvetica" font-size="14" font-weight="700" fill="#fff">L</text>
+  <text x="72" y="400" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#0F5A26">Leite 1L</text>
+  <text x="72" y="414" font-family="-apple-system,Helvetica" font-size="10" fill="#0F5A26" opacity="0.75">1 un</text>
+  <text x="286" y="408" text-anchor="end" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#0F5A26">1,20 €</text>
+
+  <!-- Item 4 -->
+  <rect x="20" y="434" width="280" height="50" rx="12" fill="#E9F5EC"/>
+  <rect x="34" y="446" width="28" height="28" rx="6" fill="#7BB661"/>
+  <text x="48" y="466" text-anchor="middle" font-family="-apple-system,Helvetica" font-size="14" font-weight="700" fill="#fff">A</text>
+  <text x="72" y="458" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#0F5A26">Azeite 500ml</text>
+  <text x="72" y="472" font-family="-apple-system,Helvetica" font-size="10" fill="#0F5A26" opacity="0.75">1 un</text>
+  <text x="286" y="466" text-anchor="end" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#0F5A26">5,99 €</text>
+
+  <!-- Botão FECHAR -->
+  <rect x="20" y="580" width="280" height="42" rx="21" fill="#1F8A3D"/>
+  <circle cx="80" cy="601" r="10" fill="none" stroke="#fff" stroke-width="2"/>
+  <path d="M75 601l4 4 6-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <text x="164" y="606" text-anchor="middle" font-family="-apple-system,Helvetica" font-size="11" font-weight="700" fill="#fff">FECHAR E GUARDAR PREÇOS</text>
+</svg>

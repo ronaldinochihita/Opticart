@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 640" width="320" height="640" role="img" aria-label="Ecrã Listas do Opticart">
+  <!-- Moldura telemóvel -->
+  <rect x="4" y="4" width="312" height="632" rx="40" ry="40" fill="#1a1a1a"/>
+  <rect x="12" y="12" width="296" height="616" rx="32" ry="32" fill="#F2F2F2"/>
+  <!-- Status bar -->
+  <text x="28" y="34" font-family="-apple-system,Helvetica" font-size="11" font-weight="600" fill="#111">9:41</text>
+  <circle cx="285" cy="30" r="4" fill="#111"/>
+
+  <!-- Marca -->
+  <circle cx="40" cy="70" r="14" fill="#1F8A3D"/>
+  <path d="M32 65h4l2.8 8.5h9.6l1.6-6H36" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="62" y="76" font-family="-apple-system,Helvetica" font-size="18" font-weight="700" fill="#1F8A3D">Opticart</text>
+
+  <!-- Título -->
+  <text x="28" y="110" font-family="-apple-system,Helvetica" font-size="20" font-weight="700" fill="#111">As minhas listas</text>
+
+  <!-- Cartão 1 -->
+  <rect x="20" y="130" width="280" height="72" rx="14" fill="#fff"/>
+  <circle cx="46" cy="166" r="18" fill="#CDE9D3"/>
+  <rect x="38" y="160" width="16" height="14" rx="2" fill="none" stroke="#1F8A3D" stroke-width="1.6"/>
+  <path d="M40 160v-2h12v2" fill="none" stroke="#1F8A3D" stroke-width="1.6"/>
+  <text x="76" y="158" font-family="-apple-system,Helvetica" font-size="14" font-weight="700" fill="#111">Compras Semanais</text>
+  <text x="76" y="174" font-family="-apple-system,Helvetica" font-size="11" fill="#6C6C6C">11 itens</text>
+  <text x="76" y="190" font-family="-apple-system,Helvetica" font-size="11" fill="#1F8A3D">📍 Minipreço V. da Gama</text>
+
+  <!-- Cartão 2 -->
+  <rect x="20" y="216" width="280" height="72" rx="14" fill="#fff"/>
+  <circle cx="46" cy="252" r="18" fill="#CDE9D3"/>
+  <rect x="38" y="246" width="16" height="14" rx="2" fill="none" stroke="#1F8A3D" stroke-width="1.6"/>
+  <path d="M40 246v-2h12v2" fill="none" stroke="#1F8A3D" stroke-width="1.6"/>
+  <text x="76" y="244" font-family="-apple-system,Helvetica" font-size="14" font-weight="700" fill="#111">Festa Aniversário</text>
+  <text x="76" y="260" font-family="-apple-system,Helvetica" font-size="11" fill="#6C6C6C">7 itens</text>
+  <text x="76" y="276" font-family="-apple-system,Helvetica" font-size="11" fill="#6C6C6C">Sem loja atribuída</text>
+
+  <!-- Cartão 3 -->
+  <rect x="20" y="302" width="280" height="72" rx="14" fill="#fff"/>
+  <circle cx="46" cy="338" r="18" fill="#CDE9D3"/>
+  <rect x="38" y="332" width="16" height="14" rx="2" fill="none" stroke="#1F8A3D" stroke-width="1.6"/>
+  <path d="M40 332v-2h12v2" fill="none" stroke="#1F8A3D" stroke-width="1.6"/>
+  <text x="76" y="330" font-family="-apple-system,Helvetica" font-size="14" font-weight="700" fill="#111">Bricolage</text>
+  <text x="76" y="346" font-family="-apple-system,Helvetica" font-size="11" fill="#6C6C6C">1 item</text>
+  <text x="76" y="362" font-family="-apple-system,Helvetica" font-size="11" fill="#1F8A3D">📍 Leroy Merlin</text>
+
+  <!-- FAB -->
+  <circle cx="272" cy="530" r="26" fill="#1F8A3D"/>
+  <path d="M272 518v24M260 530h24" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Bottom nav -->
+  <rect x="12" y="576" width="296" height="52" fill="#fff"/>
+  <rect x="30" y="588" width="70" height="28" rx="14" fill="#1F8A3D"/>
+  <text x="52" y="606" font-family="-apple-system,Helvetica" font-size="10" font-weight="700" fill="#fff">Listas</text>
+  <text x="140" y="606" font-family="-apple-system,Helvetica" font-size="10" fill="#6C6C6C">Histórico</text>
+  <text x="230" y="606" font-family="-apple-system,Helvetica" font-size="10" fill="#6C6C6C">Lojas</text>
+</svg>

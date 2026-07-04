@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 640" width="320" height="640" role="img" aria-label="Ecrã Histórico de Preços do Opticart">
+  <rect x="4" y="4" width="312" height="632" rx="40" ry="40" fill="#1a1a1a"/>
+  <rect x="12" y="12" width="296" height="616" rx="32" ry="32" fill="#F2F2F2"/>
+  <text x="28" y="34" font-family="-apple-system,Helvetica" font-size="11" font-weight="600" fill="#111">9:41</text>
+  <circle cx="285" cy="30" r="4" fill="#111"/>
+
+  <text x="28" y="80" font-family="-apple-system,Helvetica" font-size="20" font-weight="700" fill="#111">Histórico de Preços</text>
+
+  <!-- Dropdown produto -->
+  <rect x="20" y="98" width="280" height="56" rx="14" fill="#fff"/>
+  <text x="34" y="120" font-family="-apple-system,Helvetica" font-size="10" fill="#6C6C6C">Produto</text>
+  <text x="34" y="140" font-family="-apple-system,Helvetica" font-size="14" font-weight="700" fill="#111">Azeite 500ml</text>
+  <path d="M275 128l6 6 6-6" fill="none" stroke="#1F8A3D" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Comparação entre lojas -->
+  <rect x="20" y="168" width="280" height="180" rx="14" fill="#fff"/>
+  <text x="34" y="188" font-family="-apple-system,Helvetica" font-size="13" font-weight="700" fill="#111">Comparação entre lojas</text>
+  <text x="34" y="204" font-family="-apple-system,Helvetica" font-size="10" fill="#6C6C6C">★ loja mais económica</text>
+
+  <!-- Linha destacada (mais barata) -->
+  <rect x="34" y="216" width="252" height="30" rx="8" fill="#E9F5EC"/>
+  <path d="M46 231l-2-6 6 6-6 6z" fill="#1F8A3D" transform="rotate(-90 46 231)"/>
+  <polygon points="42,225 44,229 48,229 45,232 46,236 42,234 38,236 39,232 36,229 40,229" fill="#1F8A3D"/>
+  <text x="56" y="236" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#1F8A3D">Minipreço</text>
+  <text x="180" y="236" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#1F8A3D">5,99 €</text>
+  <text x="234" y="236" font-family="-apple-system,Helvetica" font-size="10" fill="#6C6C6C">há 2 sem</text>
+
+  <text x="56" y="270" font-family="-apple-system,Helvetica" font-size="12" fill="#111">Lidl</text>
+  <text x="180" y="270" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#111">6,20 €</text>
+  <text x="234" y="270" font-family="-apple-system,Helvetica" font-size="10" fill="#6C6C6C">há 5 dias</text>
+
+  <text x="56" y="296" font-family="-apple-system,Helvetica" font-size="12" fill="#111">Pingo Doce</text>
+  <text x="180" y="296" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#111">6,49 €</text>
+  <text x="234" y="296" font-family="-apple-system,Helvetica" font-size="10" fill="#6C6C6C">há 3 sem</text>
+
+  <text x="56" y="322" font-family="-apple-system,Helvetica" font-size="12" fill="#111">Continente</text>
+  <text x="180" y="322" font-family="-apple-system,Helvetica" font-size="12" font-weight="700" fill="#111">6,89 €</text>
+  <text x="234" y="322" font-family="-apple-system,Helvetica" font-size="10" fill="#6C6C6C">há 1 mês</text>
+
+  <!-- Gráfico -->
+  <rect x="20" y="362" width="280" height="180" rx="14" fill="#fff"/>
+  <text x="34" y="382" font-family="-apple-system,Helvetica" font-size="13" font-weight="700" fill="#111">Evolução do preço</text>
+  <text x="34" y="398" font-family="-apple-system,Helvetica" font-size="10" fill="#6C6C6C">€/unidade · 4 registos</text>
+
+  <!-- Gráfico linha (área) -->
+  <path d="M44 500 L44 428 L112 448 L180 488 L248 480 L248 500 Z" fill="#E9F5EC"/>
+  <polyline points="44,428 112,448 180,488 248,480" fill="none" stroke="#1F8A3D" stroke-width="2.5"/>
+  <circle cx="44" cy="428" r="4" fill="#1F8A3D"/>
+  <circle cx="44" cy="428" r="2" fill="#fff"/>
+  <circle cx="112" cy="448" r="4" fill="#1F8A3D"/>
+  <circle cx="112" cy="448" r="2" fill="#fff"/>
+  <circle cx="180" cy="488" r="4" fill="#1F8A3D"/>
+  <circle cx="180" cy="488" r="2" fill="#fff"/>
+  <circle cx="248" cy="480" r="4" fill="#1F8A3D"/>
+  <circle cx="248" cy="480" r="2" fill="#fff"/>
+  <text x="34" y="524" font-family="-apple-system,Helvetica" font-size="9" fill="#6C6C6C">Fev</text>
+  <text x="106" y="524" font-family="-apple-system,Helvetica" font-size="9" fill="#6C6C6C">Mar</text>
+  <text x="174" y="524" font-family="-apple-system,Helvetica" font-size="9" fill="#6C6C6C">Abr</text>
+  <text x="240" y="524" font-family="-apple-system,Helvetica" font-size="9" fill="#6C6C6C">Hoje</text>
+
+  <!-- Bottom nav -->
+  <rect x="12" y="576" width="296" height="52" fill="#fff"/>
+  <text x="52" y="606" font-family="-apple-system,Helvetica" font-size="10" fill="#6C6C6C">Listas</text>
+  <rect x="122" y="588" width="80" height="28" rx="14" fill="#1F8A3D"/>
+  <text x="146" y="606" font-family="-apple-system,Helvetica" font-size="10" font-weight="700" fill="#fff">Histórico</text>
+  <text x="230" y="606" font-family="-apple-system,Helvetica" font-size="10" fill="#6C6C6C">Lojas</text>
+</svg>

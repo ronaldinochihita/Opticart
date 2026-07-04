@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Opticart — aplicação Android que separa o planeamento de compras em casa da execução no supermercado. Projeto académico da UC de Programação de Aplicação do Lado do Cliente (PAC), ESTG Beja.">
+  <meta name="theme-color" content="#1F8A3D">
+  <title>Opticart · App móvel de Gestão de Compras</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="brand" href="#topo" aria-label="Opticart — página inicial">
+        <img src="assets/img/logo.svg" alt="" width="36" height="36">
+        <span>Opticart</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-primary" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-primary" id="nav-primary" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#personas">Personas</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#tecnologia">Tecnologia</a>
+        <a href="#equipa">Equipa</a>
+        <a href="https://github.com/ronaldinochihita/Opticart" class="btn btn-outline" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="chip">Projeto académico · ESTG Beja</span>
+        <h1>Duas cabeças, uma só app.</h1>
+        <p class="lead">
+          O <strong>Opticart</strong> separa o <em>planeamento</em> de compras em casa da
+          <em>execução</em> no supermercado — cada persona tem a interface certa para o
+          momento certo.
+        </p>
+        <div class="hero-actions">
+          <a href="#funcionalidades" class="btn btn-primary">Ver funcionalidades</a>
+          <a href="https://github.com/ronaldinochihita/Opticart" class="btn btn-ghost" target="_blank" rel="noopener">Código no GitHub</a>
+        </div>
+        <ul class="hero-stats" aria-label="Números-chave do projeto">
+          <li><strong>6</strong><span>ecrãs implementados</span></li>
+          <li><strong>2</strong><span>personas</span></li>
+          <li><strong>5</strong><span>entidades Room</span></li>
+        </ul>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <img src="assets/img/screen-listas.svg" alt="" class="phone phone-back">
+        <img src="assets/img/screen-modo.svg" alt="" class="phone phone-front">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOBRE ========== -->
+  <section id="sobre" class="section section-alt">
+    <div class="container narrow">
+      <span class="eyebrow">O problema</span>
+      <h2>Comprar não devia ser caótico.</h2>
+      <p>
+        Fazer compras junta duas actividades muito diferentes: preparar a lista com calma
+        em casa, e <em>executar</em> essa mesma lista no supermercado — muitas vezes com
+        pressa, uma mão no telemóvel e outra no carrinho. As apps de listas tradicionais
+        tratam os dois momentos como se fossem iguais. Não são.
+      </p>
+      <div class="two-col">
+        <div class="pain">
+          <h3>Esquecimentos</h3>
+          <p>Sem uma lista clara, produtos essenciais ficam para trás.</p>
+        </div>
+        <div class="pain">
+          <h3>Sem controlo de custos</h3>
+          <p>É difícil estimar o total antes de chegar à caixa.</p>
+        </div>
+        <div class="pain">
+          <h3>Interface pouco eficiente</h3>
+          <p>Navegar entre corredores e a app rouba tempo e atenção.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PERSONAS ========== -->
+  <section id="personas" class="section">
+    <div class="container">
+      <span class="eyebrow">A solução</span>
+      <h2>Uma app, duas personas.</h2>
+      <p class="section-lead">
+        O Opticart reconhece que a mesma pessoa <em>compra de formas diferentes</em>
+        conforme o momento — e dá-lhe a interface adequada.
+      </p>
+
+      <div class="personas">
+        <article class="persona">
+          <div class="persona-head persona-organizador">
+            <div class="persona-avatar">O</div>
+            <div>
+              <span class="persona-tag">Perfil · Planeador</span>
+              <h3>Utilizador Organizador</h3>
+            </div>
+          </div>
+          <p><strong>Contexto:</strong> em casa, sofá ou mesa da cozinha. Prepara as compras da semana com tempo.</p>
+          <p><strong>Objetivo:</strong> criar listas organizadas por loja, comparar preços entre supermercados e acompanhar histórico ao longo dos meses.</p>
+          <ul class="persona-tags">
+            <li>Planear</li><li>Comparar</li><li>Decidir</li>
+          </ul>
+        </article>
+
+        <article class="persona">
+          <div class="persona-head persona-executor">
+            <div class="persona-avatar">E</div>
+            <div>
+              <span class="persona-tag">Perfil · Executor</span>
+              <h3>Utilizador In-Store</h3>
+            </div>
+          </div>
+          <p><strong>Contexto:</strong> no supermercado, com uma mão livre. Precisa de velocidade e leitura instantânea.</p>
+          <p><strong>Objetivo:</strong> percorrer a lista, marcar cada item comprado e ver o total actualizado — com arredondamento a 5 cêntimos.</p>
+          <ul class="persona-tags">
+            <li>Marcar</li><li>Somar</li><li>Avançar</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FUNCIONALIDADES ========== -->
+  <section id="funcionalidades" class="section section-alt">
+    <div class="container">
+      <span class="eyebrow">Ecrãs</span>
+      <h2>Seis ecrãs, dois fluxos.</h2>
+      <p class="section-lead">
+        Ecrãs partilhados no início, divergem quando o utilizador entra em
+        <strong>Modo Compra</strong>.
+      </p>
+
+      <div class="features-grid">
+        <article class="feature">
+          <img src="assets/img/screen-listas.svg" alt="Ecrã Listas — home da app" class="feature-img">
+          <div class="feature-body">
+            <span class="badge badge-organizador">Organizador</span>
+            <h3>Listas</h3>
+            <p>Home da app com as listas em curso, contagem de itens, loja associada e criação rápida via floating action button.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <img src="assets/img/screen-edicao.svg" alt="Ecrã Edição de Lista" class="feature-img">
+          <div class="feature-body">
+            <span class="badge badge-organizador">Organizador</span>
+            <h3>Edição de Lista</h3>
+            <p>Adicionar/editar itens com quantidade e preço unitário, escolher loja preferida e ver total estimado em tempo real.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <img src="assets/img/screen-historico.svg" alt="Ecrã Histórico de Preços" class="feature-img">
+          <div class="feature-body">
+            <span class="badge badge-organizador">Organizador</span>
+            <h3>Histórico de Preços</h3>
+            <p>Comparação entre lojas com destaque para a mais económica e evolução do preço ao longo do tempo em gráfico.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <img src="assets/img/screen-lojas.svg" alt="Ecrã Gestão de Lojas" class="feature-img">
+          <div class="feature-body">
+            <span class="badge badge-organizador">Organizador</span>
+            <h3>Gestão de Lojas</h3>
+            <p>Registo dos supermercados frequentados, com morada, horário e escolha da loja favorita marcada por estrela.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <img src="assets/img/screen-modo.svg" alt="Ecrã Modo Compra" class="feature-img">
+          <div class="feature-body">
+            <span class="badge badge-executor">Executor</span>
+            <h3>Modo Compra</h3>
+            <p>Interface para uso no supermercado: botões grandes, total arredondado a 5 cêntimos e separação clara entre <em>por adicionar</em> e <em>no carrinho</em>.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <img src="assets/img/screen-resumo.svg" alt="Ecrã Resumo Final" class="feature-img">
+          <div class="feature-body">
+            <span class="badge badge-executor">Executor</span>
+            <h3>Resumo Final</h3>
+            <p>Encerramento da compra: total real vs. arredondado, itens confirmados e gravação automática dos preços no histórico.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECNOLOGIA ========== -->
+  <section id="tecnologia" class="section">
+    <div class="container narrow">
+      <span class="eyebrow">Stack</span>
+      <h2>Feita em Kotlin, do zero.</h2>
+      <p>
+        Arquitectura <strong>MVVM</strong> com <em>state flow</em> reactivo. Base de
+        dados <strong>local</strong> em SQLite (via Room). Interface totalmente em
+        Jetpack Compose com <em>Material 3</em>, tema próprio (paleta verde Opticart) e
+        suporte automático a modo escuro.
+      </p>
+      <ul class="tech-badges" aria-label="Tecnologias usadas">
+        <li>Kotlin 2.0</li>
+        <li>Jetpack Compose</li>
+        <li>Material 3</li>
+        <li>Room 2.6</li>
+        <li>Coroutines · Flow</li>
+        <li>Navigation Compose</li>
+        <li>Android Studio Ladybug+</li>
+        <li>KSP</li>
+        <li>Gradle 8.9 (Kotlin DSL)</li>
+      </ul>
+      <div class="tech-facts">
+        <div>
+          <strong>5</strong>
+          <span>entidades Room (Loja, Lista, Item, Histórico de Preços, Histórico de Compras)</span>
+        </div>
+        <div>
+          <strong>0</strong>
+          <span>servidores necessários — funciona 100% offline</span>
+        </div>
+        <div>
+          <strong>API 24</strong>
+          <span>mínimo — cobre &gt;95% dos dispositivos Android activos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EQUIPA ========== -->
+  <section id="equipa" class="section section-alt">
+    <div class="container narrow">
+      <span class="eyebrow">Equipa</span>
+      <h2>Feito em Beja.</h2>
+      <p>
+        Trabalho realizado no âmbito da unidade curricular de
+        <strong>Programação de Aplicação do Lado do Cliente</strong>, do 2.º ano do
+        curso de <em>Tecnologias Web e Dispositivos Móveis</em> da Escola Superior de
+        Tecnologia e Gestão de Beja (Instituto Politécnico de Beja).
+      </p>
+
+      <div class="team">
+        <article class="team-card">
+          <div class="team-avatar" aria-hidden="true">RC</div>
+          <h3>Ronaldino Fernandes Chihita</h3>
+          <p class="team-role">Programação Android · Arquitectura</p>
+        </article>
+        <article class="team-card">
+          <div class="team-avatar" aria-hidden="true">JJ</div>
+          <h3>Jorge Júnior</h3>
+          <p class="team-role">Programação Android · UI</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/img/logo.svg" alt="" width="28" height="28">
+        <span>Opticart</span>
+      </div>
+      <p class="footer-note">
+        Ano lectivo 2025/2026 · Escola Superior de Tecnologia e Gestão de Beja · IPBeja
+      </p>
+      <nav class="footer-nav" aria-label="Ligações do rodapé">
+        <a href="https://github.com/ronaldinochihita/Opticart" target="_blank" rel="noopener">Repositório</a>
+        <a href="#topo">Voltar ao topo</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
