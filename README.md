@@ -1,5 +1,8 @@
 # 🛒 OptiCart: Lista de Compras
 
+> 🌐 **Site online:** [opticartpac.netlify.app](https://opticartpac.netlify.app)  
+> 📱 **App Android:** [ver código-fonte em `android-app/`](./android-app)
+
 Bem-vindo ao repositório do **OptiCart**, um aplicativo Android desenvolvido para 
 otimizar a gestão de listas de compras e controle de gastos.
 
